@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ashraff Usman | 3D Portfolio</title>
+</head>
+<body style="margin:0; font-family:'Arial', sans-serif; background:#0a0a0a; color:white; perspective:1000px; overflow-x:hidden;">
+
+  <!-- Navigation -->
+  <div style="background:#111; display:flex; justify-content:space-between; align-items:center; padding:20px 40px; position:sticky; top:0; z-index:100;">
+    <div style="font-weight:bold; font-size:20px; letter-spacing:1px; color:#00ffff;">Ashraff Usman</div>
+    <div>
+      <a href="#about" style="color:#00ffff; margin:0 15px; text-decoration:none; font-weight:bold;">About</a>
+      <a href="#projects" style="color:#00ffff; margin:0 15px; text-decoration:none; font-weight:bold;">Projects</a>
+      <a href="#contact" style="color:#00ffff; margin:0 15px; text-decoration:none; font-weight:bold;">Contact</a>
+    </div>
+  </div>
+
+  <!-- Hero Section with animated neon grid + floating particles -->
+  <section id="hero" style="position:relative; height:600px; text-align:center; overflow:hidden;">
+    
+    <!-- Neon Grid -->
+    <div style="
+      position:absolute; top:0; left:0; width:100%; height:100%;
+      background-image:linear-gradient(#00ffff 1px, transparent 1px), linear-gradient(90deg, #00ffff 1px, transparent 1px);
+      background-size:50px 50px; 
+      animation:moveGrid 20s linear infinite;
+      z-index:0;">
+    </div>
+
+    <!-- Floating particles -->
+    <div style="position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:1;">
+      <!-- 30 particles -->
+      <div style="position:absolute; width:4px; height:4px; background:#00ffff; border-radius:50%; top:10%; left:20%; animation:float 12s infinite alternate;"></div>
+      <div style="position:absolute; width:3px; height:3px; background:#00ffff; border-radius:50%; top:50%; left:70%; animation:float 15s infinite alternate;"></div>
+      <div style="position:absolute; width:5px; height:5px; background:#00ffff; border-radius:50%; top:30%; left:50%; animation:float 10s infinite alternate;"></div>
+      <div style="position:absolute; width:2px; height:2px; background:#00ffff; border-radius:50%; top:80%; left:40%; animation:float 18s infinite alternate;"></div>
+      <div style="position:absolute; width:3px; height:3px; background:#00ffff; border-radius:50%; top:60%; left:10%; animation:float 14s infinite alternate;"></div>
+      <!-- You can copy & paste more particles for extra density -->
+    </div>
+
+    <!-- Keyframes inline -->
+    <style>
+      @keyframes moveGrid {
+        0% {background-position:0 0, 0 0;}
+        100% {background-position:500px 500px, 500px 500px;}
+      }
+      @keyframes float {
+        0% {transform:translateY(0px);}
+        50% {transform:translateY(-20px);}
+        100% {transform:translateY(0px);}
+      }
+    </style>
+
+    <!-- Hero Text -->
+    <div style="position:relative; z-index:2; top:50%; transform:translateY(-50%);">
+      <h1 style="font-size:50px; color:#00ffff; text-shadow:0 0 30px #00ffff;">Datu Shelmer Ashraff O Usman</h1>
+      <p style="font-size:24px; color:#fff; margin:10px 0;">22 years old</p>
+      <p style="font-size:20px; color:#fff; text-shadow:0 0 15px #00ffff;">Welcome to my 3D futuristic portfolio!</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" style="padding:80px 20px; background:#0f0f0f; text-align:center;">
+    <h2 style="font-size:36px; color:#00ffff; margin-bottom:30px; text-shadow:0 0 20px #00ffff;">About Me</h2>
+    
+    <!-- Question mark profile photo -->
+    <img src="https://via.placeholder.com/200x200?text=?" alt="Profile Photo" 
+         style="width:200px; border-radius:50%; border:3px solid #00ffff; margin-bottom:20px; box-shadow:0 0 30px #00ffff; transform:rotateY(0deg); transition: transform 0.6s, box-shadow 0.6s;"
+         onmouseover="this.style.transform='rotateY(20deg)'; this.style.boxShadow='0 0 50px #00ffff';"
+         onmouseout="this.style.transform='rotateY(0deg)'; this.style.boxShadow='0 0 30px #00ffff';"
+    >
+
+    <p style="max-width:900px; margin:auto; font-size:20px; line-height:1.8; color:#ccc;">
+      Hi! I'm Ashraff Usman, a futuristic web developer passionate about building high-tech, professional, and clean websites. I specialize in modern design trends, responsive interfaces, and smooth user experiences.
+    </p>
+    <p style="margin-top:25px; font-size:18px; font-weight:bold; color:#00ffff;">Skills: HTML5, CSS3, JavaScript, UI/UX Design, Responsive & Futuristic Layouts</p>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" style="padding:80px 20px; background:#111; text-align:center;">
+    <h2 style="font-size:36px; color:#00ffff; margin-bottom:50px; text-shadow:0 0 20px #00ffff;">Projects</h2>
+
+    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:30px;">
+
+      <!-- Project Cards with 3D hover -->
+      <div style="background:#1a1a1a; width:320px; border-radius:15px; overflow:hidden; box-shadow:0 0 20px #00ffff; transform:translateZ(0); transition: transform 0.5s, box-shadow 0.5s;"
+           onmouseover="this.style.transform='translateY(-10px) translateZ(30px) rotateY(10deg)'; this.style.boxShadow='0 0 50px #00ffff';"
+           onmouseout="this.style.transform='translateZ(0)'; this.style.boxShadow='0 0 20px #00ffff';"
+      >
+        <img src="https://images.unsplash.com/photo-1581091215365-57f893a1f252?auto=format&fit=crop&w=320&q=80" alt="Portfolio Screenshot" style="width:100%; display:block;">
+        <div style="padding:20px; text-align:left; color:#ccc;">
+          <h3 style="color:#00ffff; margin-bottom:10px;">Personal Portfolio</h3>
+          <p>A futuristic website showcasing my work with neon/glow aesthetic.</p>
+        </div>
+      </div>
+
+      <div style="background:#1a1a1a; width:320px; border-radius:15px; overflow:hidden; box-shadow:0 0 20px #00ffff; transform:translateZ(0); transition: transform 0.5s, box-shadow 0.5s;"
+           onmouseover="this.style.transform='translateY(-10px) translateZ(30px) rotateY(10deg)'; this.style.boxShadow='0 0 50px #00ffff';"
+           onmouseout="this.style.transform='translateZ(0)'; this.style.boxShadow='0 0 20px #00ffff';"
+      >
+        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=320&q=80" alt="Web App Screenshot" style="width:100%; display:block;">
+        <div style="padding:20px; text-align:left; color:#ccc;">
+          <h3 style="color:#00ffff; margin-bottom:10px;">Web Application</h3>
+          <p>A web app built with HTML & JS, featuring smooth interactions and 3D-like interface.</p>
+        </div>
+      </div>
+
+      <div style="background:#1a1a1a; width:320px; border-radius:15px; overflow:hidden; box-shadow:0 0 20px #00ffff; transform:translateZ(0); transition: transform 0.5s, box-shadow 0.5s;"
+           onmouseover="this.style.transform='translateY(-10px) translateZ(30px) rotateY(10deg)'; this.style.boxShadow='0 0 50px #00ffff';"
+           onmouseout="this.style.transform='translateZ(0)'; this.style.boxShadow='0 0 20px #00ffff';"
+      >
+        <img src="https://images.unsplash.com/photo-1581091012184-bd14f3a49db2?auto=format&fit=crop&w=320&q=80" alt="UI Mockup Screenshot" style="width:100%; display:block;">
+        <div style="padding:20px; text-align:left; color:#ccc;">
+          <h3 style="color:#00ffff; margin-bottom:10px;">UI Mockup Design</h3>
+          <p>A futuristic interface mockup with neon highlights and 3D hover effect.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" style="padding:80px 20px; background:#0f0f0f; text-align:center;">
+    <h2 style="font-size:36px; color:#00ffff; margin-bottom:30px; text-shadow:0 0 20px #00ffff;">Contact Me</h2>
+    <p style="font-size:20px; color:#ccc;">Email: <a href="mailto:ashraffusman@example.com" style="color:#00ffff; text-decoration:none;">ashraffusman@example.com</a></p>
+    <p style="font-size:20px; color:#ccc;">GitHub: <a href="https://github.com/ashraffusman" target="_blank" style="color:#00ffff; text-decoration:none;">github.com/ashraffusman</a></p>
+    <p style="font-size:20px; color:#ccc;">LinkedIn: <a href="https://linkedin.com/in/ashraffusman" target="_blank" style="color:#00ffff; text-decoration:none;">linkedin.com/in/ashraffusman</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer style="background:#111; color:white; text-align:center; padding:30px; font-size:16px;">
+    &copy; 2026 Ashraff Usman. All rights reserved.
+  </footer>
+
+</body>
+</html>
